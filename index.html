@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Centro Educacional - Escola de Inglês</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            max-width: 70px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+            background: transparent;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ff0000;
+            letter-spacing: 2px;
+        }
+
+        .logo-sub {
+            font-size: 14px;
+            font-weight: 300;
+            color: #ffffff;
+            letter-spacing: 3px;
+        }
+
+        .logo-location {
+            font-size: 12px;
+            color: #ff0000;
+            font-weight: 300;
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26,42,79,0.85), rgba(44,62,110,0.85)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 span {
+            color: #ff0000;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            font-style: italic;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #1a2a4f;
+            position: relative;
+        }
+
+        section h2:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #ff0000;
+            margin: 20px auto 0;
+        }
+
+        /* Sobre */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .about-highlight {
+            background: #f0f3f8;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ff0000;
+            margin: 30px 0;
+        }
+
+        .about-highlight p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #1a2a4f;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Metodologia */
+        .methodology {
+            background: #f8f9fa;
+        }
+
+        .methodology-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .methodology-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .methodology-item h3 {
+            color: #1a2a4f;
+            margin: 20px 0 15px;
+            font-size: 24px;
+        }
+
+        .methodology-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .methodology-icon {
+            font-size: 48px;
+            color: #ff0000;
+        }
+
+        /* Turmas e Horários - ATUALIZADO */
+        .schedules {
+            background: white;
+        }
+
+        .schedules-highlight {
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #ff0000 0%, #ff4d4d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .schedules-highlight h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .schedules-highlight p {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .schedules-highlight .price {
+            font-size: 28px;
+            font-weight: bold;
+            background: white;
+            color: #ff0000;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+        }
+
+        .modality-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0 20px;
+        }
+
+        .modality-tab {
+            background: #f0f3f8;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: #1a2a4f;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .modality-tab.active {
+            background: #ff0000;
+            color: white;
+        }
+
+        .modality-section {
+            margin-top: 40px;
+        }
+
+        .modality-section h3 {
+            font-size: 28px;
+            color: #1a2a4f;
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 5px solid #ff0000;
+        }
+
+        .schedules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .schedule-card {
+            background: linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-bottom: 4px solid #ff0000;
+            transition: transform 0.3s;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .schedule-card .modality-badge {
+            background: rgba(255,0,0,0.2);
+            color: #ff0000;
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .schedule-card h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff0000;
+        }
+
+        .schedule-card .course-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .schedule-card .age {
+            font-size: 14px;
+            color: #ffd966;
+            margin-bottom: 15px;
+        }
+
+        .schedule-card .day {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .schedule-card .time {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 10px 0;
+            color: #ff0000;
+        }
+
+        .schedule-tag {
+            display: inline-block;
+            background: #ff0000;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* CURSOS */
+        .courses {
+            background: #f8f9fa;
+        }
+
+        .courses-category {
+            margin-bottom: 60px;
+        }
+
+        .courses-category h3 {
+            font-size: 28px;
+            color: #1a2a4f;
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 5px solid #ff0000;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-bottom: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom-color: #ff0000;
+        }
+
+        .course-emoji {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .course-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a2a4f;
+            margin-bottom: 5px;
+        }
+
+        .course-age {
+            font-size: 16px;
+            color: #ff0000;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .course-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .course-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .course-features li {
+            margin-bottom: 8px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .course-features li:before {
+            content: "✓";
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .course-tag {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff0000;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        .course-note {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            color: #1a2a4f;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .course-note strong {
+            color: #ff0000;
+        }
+
+        /* Depoimentos */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid #ff0000;
+        }
+
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            color: #1a2a4f;
+        }
+
+        .testimonial-role {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #ff0000 0%, #ff4d4d 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta h2 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta h2:after {
+            background: white;
+        }
+
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: #ff0000;
+            font-size: 20px;
+            padding: 15px 50px;
+        }
+
+        .cta .btn:hover {
+            background: #f0f0f0;
+        }
+
+        /* Contato */
+        .contact {
+            background: linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%);
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact h2:after {
+            background: #ff0000;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            font-size: 24px;
+            color: #ff0000;
+        }
+
+        .address-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff0000;
+        }
+
+        .address-box h3 {
+            color: #ff0000;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .address-box p {
+            color: white;
+            line-height: 1.6;
+        }
+
+        .contact-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .contact-whatsapp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Card do WhatsApp */
+        .whatsapp-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            border: 2px solid #25D366;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-card:hover {
+            transform: translateY(-5px);
+            background: rgba(37, 211, 102, 0.15);
+        }
+
+        .whatsapp-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-card h3 {
+            color: #25D366;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-card p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-card .btn {
+            background: #25D366;
+            color: white;
+            font-size: 22px;
+            padding: 20px 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-card .btn:hover {
+            background: #20b859;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #0f1a2f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: #ff0000;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        .social-links a:hover {
+            color: #ff4d4d;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .about-content,
+            .contact-content,
+            .methodology-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .modality-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .logo-img {
+                height: 50px;
+                max-width: 50px;
+            }
+            
+            .schedules-highlight h3 {
+                font-size: 24px;
+            }
+            
+            .schedules-highlight .price {
+                font-size: 22px;
+            }
+        }
+
+        /* Mapa */
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            display: block;
+        }
+
+        /* Aviso de novo endereço */
+        .new-address-badge {
+            background: #ff0000;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="iso logo.png" alt="ISO Centro Educacional" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">ISO</span>
+                    <span class="logo-sub">CENTRO EDUCACIONAL</span>
+                    <span class="logo-location">ROCHA NEVES</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#metodologia">Metodologia</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#horarios">Horários</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1><span>#VEMPRÁISO</span></h1>
+            <h1>Escola de Inglês Híbrida</h1>
+            <p>"Não é sobre explicar regra. É sobre automatizar a fala."</p>
+            <a href="https://wa.me/5538998290966" class="btn" target="_blank" rel="noopener noreferrer">📲 Fale Conosco no WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>O <strong>ISO Centro Educacional</strong> é referência no ensino de inglês em Rocha Neves. Nossa abordagem comunicativa e moderna prepara os alunos para os desafios de um mundo globalizado.</p>
+                    
+                    <div class="about-highlight">
+                        <p>"Você pode estudar inglês por anos… ou aprender do jeito certo desde o começo."</p>
+                    </div>
+                    
+                    <p>Aqui na ISO, aprender inglês não é decorar. É viver o idioma desde cedo, com metodologia que prioriza a comunicação real e a automação da fala, não apenas regras gramaticais.</p>
+                    
+                    <!-- AVISO DE NOVO ENDEREÇO -->
+                    <div style="margin-top: 20px; background: #ff0000; color: white; padding: 15px; border-radius: 10px; text-align: center;">
+                        <p style="font-weight: bold; margin-bottom: 5px;">📍 NOVO ENDEREÇO!</p>
+                        <p style="margin: 0;">Estamos em novas instalações. Venha nos visitar!</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sala de aula ISO Centro Educacional" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="methodology" id="metodologia">
+        <div class="container">
+            <h2>Nossa Metodologia</h2>
+            <div class="methodology-content">
+                <div class="methodology-item">
+                    <div class="methodology-icon">🗣️</div>
+                    <h3>Automação da Fala</h3>
+                    <p>No segundo dia de aula, nossos alunos já usam estruturas como "I am used to" com segurança. Sem travar. Sem depender de tradução.</p>
+                </div>
+                <div class="methodology-item">
+                    <div class="methodology-icon">🧠</div>
+                    <h3>Aprendizado Estratégico</h3>
+                    <p>Estrutura clara. Repetição estratégica. Aplicação real. Nosso método não é tentativa e erro - é direção.</p>
+                </div>
+                <div class="methodology-item">
+                    <div class="methodology-icon">🦅</div>
+                    <h3>Ensino Lúdico por Fases</h3>
+                    <p>Cada fase (Fish, Eagle, Tiger, Panda, Lion) é desenvolvida para a maturidade e necessidades específicas de cada idade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE HORÁRIOS ATUALIZADA -->
+    <section class="schedules" id="horarios">
+        <div class="container">
+            <div class="schedules-highlight">
+                <h3>📢 MATRÍCULAS ABERTAS!</h3>
+                <p>Escola de Inglês Híbrida</p>
+                <p class="price">Parcelas a partir de R$110,00</p>
+            </div>
+            
+            <!-- Turmas Online -->
+            <div class="modality-section">
+                <h3>🌐 Turmas Online</h3>
+                <div class="schedules-grid">
+                    <div class="schedule-card">
+                        <span class="modality-badge">🌐 Online</span>
+                        <h4>Iniciante</h4>
+                        <div class="course-name">Adultos e Adolescentes</div>
+                        <div class="day">Segunda-feira</div>
+                        <div class="time">15:00</div>
+                        <span class="schedule-tag">Vagas Limitadas</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🌐 Online</span>
+                        <h4>Iniciante</h4>
+                        <div class="course-name">9 a 11 anos</div>
+                        <div class="day">Segunda-feira</div>
+                        <div class="time">18:00</div>
+                        <span class="schedule-tag">Vagas Limitadas</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🌐 Online</span>
+                        <h4>Pré-intermediário</h4>
+                        <div class="day">Terça-feira</div>
+                        <div class="time">19:00</div>
+                        <span class="schedule-tag">Vagas Limitadas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Turmas Presenciais -->
+            <div class="modality-section">
+                <h3>🏫 Turmas Presenciais</h3>
+                <div class="schedules-grid">
+                    <!-- TERÇA -->
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Jaguar</h4>
+                        <div class="day">Terça-feira</div>
+                        <div class="time">15:00 - 16:00</div>
+                        <div class="time" style="font-size: 18px;">ou 15:00 - 17:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <!-- QUARTA -->
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Tiger 2</h4>
+                        <div class="day">Quarta-feira</div>
+                        <div class="time">14:00 - 16:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Tiger 1</h4>
+                        <div class="day">Quarta-feira</div>
+                        <div class="time">16:00 - 17:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Baby</h4>
+                        <div class="day">Quarta-feira</div>
+                        <div class="time">17:30 - 18:30</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <!-- QUINTA -->
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Eagle</h4>
+                        <div class="day">Quinta-feira</div>
+                        <div class="time">9:00 - 10:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Tiger 1</h4>
+                        <div class="day">Quinta-feira</div>
+                        <div class="time">14:00 - 15:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Panda 1</h4>
+                        <div class="day">Quinta-feira</div>
+                        <div class="time">15:00 - 16:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; background: #f0f3f8; padding: 30px; border-radius: 10px;">
+                <p style="font-size: 20px; color: #1a2a4f;">🚀 Garanta sua vaga e comece agora mesmo!</p>
+                <p style="margin-top: 10px; font-size: 18px;">📱 Turmas online e presenciais com a mesma qualidade ISO</p>
+                <a href="https://wa.me/5538998290966" class="btn" style="margin-top: 20px; display: inline-block;">📲 Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CURSOS -->
+    <section class="courses" id="cursos">
+        <div class="container">
+            <h2>Nossos Cursos por Faixa Etária</h2>
+            
+            <!-- Categoria: Educação Infantil -->
+            <div class="courses-category">
+                <h3>🐣 Educação Infantil</h3>
+                <div class="courses-grid">
+                    <!-- Baby Bunny -->
+                    <div class="course-card">
+                        <div class="course-emoji">🐰</div>
+                        <div class="course-name">Baby Bunny</div>
+                        <div class="course-age">Crianças pequenas</div>
+                        <div class="course-description">
+                            Aprender pode (e deve!) ser divertido desde cedo. Pensado para crianças pequenas, com aulas lúdicas, músicas, cores e muito carinho.
+                        </div>
+                        <ul class="course-features">
+                            <li>Aprendizado no tempo certo</li>
+                            <li>Ambiente seguro e acolhedor</li>
+                            <li>Músicas e atividades lúdicas</li>
+                        </ul>
+                        <span class="course-tag">Aula experimental</span>
+                    </div>
+                    
+                    <!-- Fish -->
+                    <div class="course-card">
+                        <div class="course-emoji">🐟</div>
+                        <div class="course-name">Fish</div>
+                        <div class="course-age">A partir de 5-6 anos</div>
+                        <div class="course-description">
+                            Curiosidade, criatividade e descobertas todos os dias. As crianças aprendem de forma leve, com atividades que estimulam o raciocínio, a comunicação e a autonomia.
+                        </div>
+                        <ul class="course-features">
+                            <li>Ensino adequado à fase da criança</li>
+                            <li>Aprender brincando</li>
+                            <li>Estímulo à comunicação</li>
+                        </ul>
+                        <span class="course-tag">Aula experimental</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categoria: Fundamental I -->
+            <div class="courses-category">
+                <h3>🦅 Fundamental I (7 a 9 anos)</h3>
+                <div class="courses-grid">
+                    <!-- Eagle -->
+                    <div class="course-card">
+                        <div class="course-emoji">🦅</div>
+                        <div class="course-name">Eagle</div>
+                        <div class="course-age">7 a 9 anos</div>
+                        <div class="course-description">
+                            Do vocabulário à comunicação real. No Eagle, o aluno aprende a contar histórias, falar sobre o passado e se expressar com clareza e segurança.
+                        </div>
+                        <ul class="course-features">
+                            <li>Expansão de vocabulário</li>
+                            <li>Comunicação confiante</li>
+                            <li>Aprendizado em novo patamar</li>
+                        </ul>
+                        <span class="course-tag">Matrículas abertas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categoria: Fundamental II -->
+            <div class="courses-category">
+                <h3>🐯 Fundamental II (11 a 15 anos)</h3>
+                <div class="courses-grid">
+                    <!-- Tiger I -->
+                    <div class="course-card">
+                        <div class="course-emoji">🐯</div>
+                        <div class="course-name">Tiger I</div>
+                        <div class="course-age">11 a 13 anos</div>
+                        <div class="course-description">
+                            Uma base sólida para crescer e avançar com segurança. O inglês se torna parte da rotina do aluno, com projetos que desenvolvem vocabulário, confiança e expressão pessoal.
+                        </div>
+                        <ul class="course-features">
+                            <li>Falar sobre si e o mundo</li>
+                            <li>Aprender de forma natural</li>
+                            <li>Inglês como aventura diária</li>
+                        </ul>
+                        <span class="course-tag">Aula experimental</span>
+                    </div>
+                    
+                    <!-- Tiger II -->
+                    <div class="course-card">
+                        <div class="course-emoji">🐯</div>
+                        <div class="course-name">Tiger II</div>
+                        <div class="course-age">13 a 15 anos</div>
+                        <div class="course-description">
+                            Estrutura, fluência e maturidade linguística. O aluno aprimora escrita, fala e compreensão, se preparando para alcançar o nível B1 com segurança.
+                        </div>
+                        <ul class="course-features">
+                            <li>Temas reais e atuais</li>
+                            <li>Debates e projetos</li>
+                            <li>Evolução contínua</li>
+                        </ul>
+                        <span class="course-tag">Matrículas abertas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categoria: Ensino Médio -->
+            <div class="courses-category">
+                <h3>🐼 Ensino Médio (15 a 18 anos)</h3>
+                <div class="courses-grid">
+                    <!-- Panda I -->
+                    <div class="course-card">
+                        <div class="course-emoji">🐼</div>
+                        <div class="course-name">Panda I</div>
+                        <div class="course-age">15 a 17 anos</div>
+                        <div class="course-description">
+                            O inglês que prepara para o futuro. O adolescente desenvolve autonomia, argumentação e escrita clara, caminhando para um B2 de verdade.
+                        </div>
+                        <ul class="course-features">
+                            <li>Debates e apresentações</li>
+                            <li>Temas atuais</li>
+                            <li>Escrita e fluência avançadas</li>
+                        </ul>
+                        <span class="course-tag">Matrículas abertas</span>
+                    </div>
+                    
+                    <!-- Panda II -->
+                    <div class="course-card">
+                        <div class="course-emoji">🐼</div>
+                        <div class="course-name">Panda II</div>
+                        <div class="course-age">15 a 18 anos</div>
+                        <div class="course-description">
+                            Inglês avançado para pensar, argumentar e liderar. Transforma o inglês em ferramenta real para estudos e futuro, desenvolvendo nível B2 com preparação para pré-C1.
+                        </div>
+                        <ul class="course-features">
+                            <li>Debates e projetos</li>
+                            <li>Escrita avançada</li>
+                            <li>Pensamento crítico</li>
+                        </ul>
+                        <span class="course-tag">Matrículas abertas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categoria: Adulto -->
+            <div class="courses-category">
+                <h3>🦁 Adulto (+16 anos)</h3>
+                <div class="courses-grid">
+                    <!-- LION -->
+                    <div class="course-card">
+                        <div class="course-emoji">🦁</div>
+                        <div class="course-name">LION</div>
+                        <div class="course-age">+16 anos</div>
+                        <div class="course-description">
+                            Onde o inglês alcança o nível acadêmico e profissional. Para quem precisa usar o inglês com excelência, com foco em argumentação, linguagem formal e produção de textos.
+                        </div>
+                        <ul class="course-features">
+                            <li>Preparação para universidades</li>
+                            <li>Mercado global</li>
+                            <li>Certificações internacionais</li>
+                        </ul>
+                        <span class="course-tag">Curso anual - 4 módulos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Observação sobre cursos -->
+            <div class="course-note">
+                <p>📌 <strong>Todos os cursos são anuais em 4 módulos</strong> · Matrículas abertas · Vagas limitadas</p>
+                <p style="margin-top: 10px; font-size: 16px;">Consulte horários disponíveis para cada turma</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>⚠️ Vagas Limitadas!</h2>
+            <p>Não perca a oportunidade de aprender inglês do jeito certo, com uma metodologia que realmente funciona.</p>
+            <a href="https://wa.me/5538998290966" class="btn" target="_blank" rel="noopener noreferrer">📲 Garanta Sua Vaga Agora</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <div>
+                    <!-- SELO DE NOVO ENDEREÇO -->
+                    <div class="new-address-badge">🆕 NOVO ENDEREÇO</div>
+                    
+                    <ul class="contact-info">
+                        <li>
+                            <i>📍</i>
+                            <span>São João do Paraíso - MG</span>
+                        </li>
+                        <li>
+                            <i>📞</i>
+                            <span>(38) 99829-0966</span>
+                        </li>
+                        <li>
+                            <i>⏰</i>
+                            <span>Segunda a Sexta: 9h às 21h | Sábado: 9h às 13h</span>
+                        </li>
+                        <li>
+                            <i>📱</i>
+                            <span>@iso_centroeducacional</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- SEÇÃO DE ENDEREÇO COMPLETO -->
+                    <div class="address-box">
+                        <h3>📍 Nosso Endereço</h3>
+                        <p>
+                            <strong>ISO Centro Educacional</strong><br>
+                            Av. Dr. Osório Adrião da Rocha, 796<br>
+                            São João do Paraíso - MG<br>
+                            CEP: 39540-000
+                        </p>
+                        <p style="margin-top: 10px; color: #ff0000; font-weight: bold;">
+                            ⚡ Fácil acesso e estacionamento no local
+                        </p>
+                    </div>
+                    
+                    <!-- MAPA -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.680016439112!2d-41.98186352405082!3d-15.312657889336305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x74a3d9a53fa37a1%3A0x6c4b6c7c7f8f8f8f!2sAv.%20Dr.%20Os%C3%B3rio%20Adri%C3%A3o%20da%20Rocha%2C%20796%20-%20S%C3%A3o%20Jo%C3%A3o%20do%20Para%C3%ADso%2C%20MG%2C%2039540-000!5e0!3m2!1spt-BR!2sbr!4v1710801234567!5m2!1spt-BR!2sbr" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa da ISO Centro Educacional">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- CARD DO WHATSAPP -->
+                <div class="whatsapp-card">
+                    <div class="whatsapp-icon">📱</div>
+                    <h3>Fale Conosco no WhatsApp</h3>
+                    <p>📞 (38) 99829-0966</p>
+                    <p>✅ Atendimento rápido e personalizado<br>✅ Tire suas dúvidas sobre cursos e horários<br>✅ Faça sua matrícula diretamente pelo celular</p>
+                    <a href="https://wa.me/5538998290966" class="btn" target="_blank" rel="noopener noreferrer">
+                        👉 Enviar Mensagem Agora
+                    </a>
+                    <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">Clique no botão e comece a conversar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ISO Centro Educacional. Todos os direitos reservados.</p>
+            <p><strong>Endereço:</strong> Av. Dr. Osório Adrião da Rocha, 796 - São João do Paraíso/MG - CEP: 39540-000</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/iso_centroeducacional" target="_blank" rel="noopener noreferrer">📷 @iso_centroeducacional</a>
+                <a href="https://wa.me/5538998290966" target="_blank" rel="noopener noreferrer">📱 WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu responsivo - scroll suave
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.background = 'linear-gradient(135deg, #0f1a2f 0%, #1a2a4f 100%)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.background = 'linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%)';
+            }
+        });
+
+        // Destacar link do menu ativo durante o scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            const headerHeight = document.querySelector('header').offsetHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 50;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if(window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    current = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if(link.getAttribute('href') === current) {
+                    link.style.color = '#ff0000';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
