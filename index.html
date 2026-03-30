@@ -12,7 +12,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Cabeçalho */
         header {
             background: linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%);
             color: white;
@@ -95,7 +94,6 @@
             color: #ff0000;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26,42,79,0.85), rgba(44,62,110,0.85)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
@@ -164,7 +162,6 @@
             box-shadow: 0 5px 15px rgba(255,0,0,0.3);
         }
 
-        /* Seções */
         section {
             padding: 80px 0;
         }
@@ -186,7 +183,6 @@
             margin: 20px auto 0;
         }
 
-        /* Sobre */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -222,7 +218,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Metodologia */
         .methodology {
             background: #f8f9fa;
         }
@@ -258,7 +253,6 @@
             color: #ff0000;
         }
 
-        /* Turmas e Horários - ATUALIZADO */
         .schedules {
             background: white;
         }
@@ -400,7 +394,6 @@
             margin-top: 15px;
         }
 
-        /* CURSOS */
         .courses {
             background: #f8f9fa;
         }
@@ -512,7 +505,6 @@
             color: #ff0000;
         }
 
-        /* Depoimentos */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -559,7 +551,6 @@
             font-size: 14px;
         }
 
-        /* CTA Section */
         .cta {
             background: linear-gradient(135deg, #ff0000 0%, #ff4d4d 100%);
             color: white;
@@ -593,7 +584,6 @@
             background: #f0f0f0;
         }
 
-        /* Contato */
         .contact {
             background: linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%);
             color: white;
@@ -664,7 +654,6 @@
             transform: scale(1.05);
         }
 
-        /* Card do WhatsApp */
         .whatsapp-card {
             background: rgba(255,255,255,0.1);
             border-radius: 10px;
@@ -710,7 +699,6 @@
             background: #20b859;
         }
 
-        /* Rodapé */
         footer {
             background: #0f1a2f;
             color: white;
@@ -733,7 +721,6 @@
             color: #ff4d4d;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -802,7 +789,6 @@
             }
         }
 
-        /* Mapa */
         .map-container {
             margin-top: 20px;
             border-radius: 10px;
@@ -817,7 +803,6 @@
             display: block;
         }
 
-        /* Aviso de novo endereço */
         .new-address-badge {
             background: #ff0000;
             color: white;
@@ -877,7 +862,6 @@
                     
                     <p>Aqui na ISO, aprender inglês não é decorar. É viver o idioma desde cedo, com metodologia que prioriza a comunicação real e a automação da fala, não apenas regras gramaticais.</p>
                     
-                    <!-- AVISO DE NOVO ENDEREÇO -->
                     <div style="margin-top: 20px; background: #ff0000; color: white; padding: 15px; border-radius: 10px; text-align: center;">
                         <p style="font-weight: bold; margin-bottom: 5px;">📍 NOVO ENDEREÇO!</p>
                         <p style="margin: 0;">Estamos em novas instalações. Venha nos visitar!</p>
@@ -913,7 +897,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE HORÁRIOS ATUALIZADA -->
     <section class="schedules" id="horarios">
         <div class="container">
             <div class="schedules-highlight">
@@ -922,83 +905,43 @@
                 <p class="price">Parcelas a partir de R$110,00</p>
             </div>
             
-            <!-- Turmas Online -->
             <div class="modality-section">
                 <h3>🌐 Turmas Online</h3>
                 <div class="schedules-grid">
                     <div class="schedule-card">
                         <span class="modality-badge">🌐 Online</span>
                         <h4>Iniciante</h4>
-                        <div class="course-name">Adultos e Adolescentes</div>
                         <div class="day">Segunda-feira</div>
-                        <div class="time">15:00</div>
-                        <span class="schedule-tag">Vagas Limitadas</span>
-                    </div>
-                    
-                    <div class="schedule-card">
-                        <span class="modality-badge">🌐 Online</span>
-                        <h4>Iniciante</h4>
-                        <div class="course-name">9 a 11 anos</div>
-                        <div class="day">Segunda-feira</div>
-                        <div class="time">18:00</div>
-                        <span class="schedule-tag">Vagas Limitadas</span>
-                    </div>
-                    
-                    <div class="schedule-card">
-                        <span class="modality-badge">🌐 Online</span>
-                        <h4>Pré-intermediário</h4>
-                        <div class="day">Terça-feira</div>
-                        <div class="time">19:00</div>
+                        <div class="time">15:00 - 16:00</div>
                         <span class="schedule-tag">Vagas Limitadas</span>
                     </div>
                 </div>
             </div>
             
-            <!-- Turmas Presenciais -->
             <div class="modality-section">
                 <h3>🏫 Turmas Presenciais</h3>
                 <div class="schedules-grid">
-                    <!-- TERÇA -->
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
-                        <h4>Jaguar</h4>
+                        <h4>Jaguar: 1 hora de aula</h4>
                         <div class="day">Terça-feira</div>
-                        <div class="time">15:00 - 16:00</div>
-                        <div class="time" style="font-size: 18px;">ou 15:00 - 17:00</div>
+                        <div class="time">14:00 - 15:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
                     
-                    <!-- QUARTA -->
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Jaguar: 2 horas de aula</h4>
+                        <div class="day">Terça-feira</div>
+                        <div class="time">15:00 - 17:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
                         <h4>Tiger 2</h4>
                         <div class="day">Quarta-feira</div>
                         <div class="time">14:00 - 16:00</div>
-                        <span class="schedule-tag">Presencial</span>
-                    </div>
-                    
-                    <div class="schedule-card">
-                        <span class="modality-badge">🏫 Presencial</span>
-                        <h4>Tiger 1</h4>
-                        <div class="day">Quarta-feira</div>
-                        <div class="time">16:00 - 17:00</div>
-                        <span class="schedule-tag">Presencial</span>
-                    </div>
-                    
-                    <div class="schedule-card">
-                        <span class="modality-badge">🏫 Presencial</span>
-                        <h4>Baby</h4>
-                        <div class="day">Quarta-feira</div>
-                        <div class="time">17:30 - 18:30</div>
-                        <span class="schedule-tag">Presencial</span>
-                    </div>
-                    
-                    <!-- QUINTA -->
-                    <div class="schedule-card">
-                        <span class="modality-badge">🏫 Presencial</span>
-                        <h4>Eagle</h4>
-                        <div class="day">Quinta-feira</div>
-                        <div class="time">9:00 - 10:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
                     
@@ -1012,9 +955,17 @@
                     
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
-                        <h4>Panda 1</h4>
+                        <h4>Panda</h4>
                         <div class="day">Quinta-feira</div>
                         <div class="time">15:00 - 16:00</div>
+                        <span class="schedule-tag">Presencial</span>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <span class="modality-badge">🏫 Presencial</span>
+                        <h4>Eagle</h4>
+                        <div class="day">Quinta-feira</div>
+                        <div class="time">09:00 - 10:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
                 </div>
@@ -1028,16 +979,13 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE CURSOS -->
     <section class="courses" id="cursos">
         <div class="container">
             <h2>Nossos Cursos por Faixa Etária</h2>
             
-            <!-- Categoria: Educação Infantil -->
             <div class="courses-category">
                 <h3>🐣 Educação Infantil</h3>
                 <div class="courses-grid">
-                    <!-- Baby Bunny -->
                     <div class="course-card">
                         <div class="course-emoji">🐰</div>
                         <div class="course-name">Baby Bunny</div>
@@ -1053,7 +1001,6 @@
                         <span class="course-tag">Aula experimental</span>
                     </div>
                     
-                    <!-- Fish -->
                     <div class="course-card">
                         <div class="course-emoji">🐟</div>
                         <div class="course-name">Fish</div>
@@ -1071,11 +1018,9 @@
                 </div>
             </div>
             
-            <!-- Categoria: Fundamental I -->
             <div class="courses-category">
                 <h3>🦅 Fundamental I (7 a 9 anos)</h3>
                 <div class="courses-grid">
-                    <!-- Eagle -->
                     <div class="course-card">
                         <div class="course-emoji">🦅</div>
                         <div class="course-name">Eagle</div>
@@ -1093,11 +1038,9 @@
                 </div>
             </div>
             
-            <!-- Categoria: Fundamental II -->
             <div class="courses-category">
                 <h3>🐯 Fundamental II (11 a 15 anos)</h3>
                 <div class="courses-grid">
-                    <!-- Tiger I -->
                     <div class="course-card">
                         <div class="course-emoji">🐯</div>
                         <div class="course-name">Tiger I</div>
@@ -1113,7 +1056,6 @@
                         <span class="course-tag">Aula experimental</span>
                     </div>
                     
-                    <!-- Tiger II -->
                     <div class="course-card">
                         <div class="course-emoji">🐯</div>
                         <div class="course-name">Tiger II</div>
@@ -1131,11 +1073,9 @@
                 </div>
             </div>
             
-            <!-- Categoria: Ensino Médio -->
             <div class="courses-category">
                 <h3>🐼 Ensino Médio (15 a 18 anos)</h3>
                 <div class="courses-grid">
-                    <!-- Panda I -->
                     <div class="course-card">
                         <div class="course-emoji">🐼</div>
                         <div class="course-name">Panda I</div>
@@ -1151,7 +1091,6 @@
                         <span class="course-tag">Matrículas abertas</span>
                     </div>
                     
-                    <!-- Panda II -->
                     <div class="course-card">
                         <div class="course-emoji">🐼</div>
                         <div class="course-name">Panda II</div>
@@ -1169,11 +1108,9 @@
                 </div>
             </div>
             
-            <!-- Categoria: Adulto -->
             <div class="courses-category">
                 <h3>🦁 Adulto (+16 anos)</h3>
                 <div class="courses-grid">
-                    <!-- LION -->
                     <div class="course-card">
                         <div class="course-emoji">🦁</div>
                         <div class="course-name">LION</div>
@@ -1191,7 +1128,6 @@
                 </div>
             </div>
             
-            <!-- Observação sobre cursos -->
             <div class="course-note">
                 <p>📌 <strong>Todos os cursos são anuais em 4 módulos</strong> · Matrículas abertas · Vagas limitadas</p>
                 <p style="margin-top: 10px; font-size: 16px;">Consulte horários disponíveis para cada turma</p>
@@ -1212,7 +1148,6 @@
             <h2>Entre em Contato</h2>
             <div class="contact-content">
                 <div>
-                    <!-- SELO DE NOVO ENDEREÇO -->
                     <div class="new-address-badge">🆕 NOVO ENDEREÇO</div>
                     
                     <ul class="contact-info">
@@ -1234,7 +1169,6 @@
                         </li>
                     </ul>
                     
-                    <!-- SEÇÃO DE ENDEREÇO COMPLETO -->
                     <div class="address-box">
                         <h3>📍 Nosso Endereço</h3>
                         <p>
@@ -1248,7 +1182,6 @@
                         </p>
                     </div>
                     
-                    <!-- MAPA -->
                     <div class="map-container">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.680016439112!2d-41.98186352405082!3d-15.312657889336305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x74a3d9a53fa37a1%3A0x6c4b6c7c7f8f8f8f!2sAv.%20Dr.%20Os%C3%B3rio%20Adri%C3%A3o%20da%20Rocha%2C%20796%20-%20S%C3%A3o%20Jo%C3%A3o%20do%20Para%C3%ADso%2C%20MG%2C%2039540-000!5e0!3m2!1spt-BR!2sbr!4v1710801234567!5m2!1spt-BR!2sbr" 
@@ -1260,7 +1193,6 @@
                     </div>
                 </div>
                 
-                <!-- CARD DO WHATSAPP -->
                 <div class="whatsapp-card">
                     <div class="whatsapp-icon">📱</div>
                     <h3>Fale Conosco no WhatsApp</h3>
@@ -1287,7 +1219,6 @@
     </footer>
 
     <script>
-        // Menu responsivo - scroll suave
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1306,7 +1237,6 @@
             });
         });
 
-        // Efeito de scroll no header
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if(window.scrollY > 100) {
@@ -1318,7 +1248,6 @@
             }
         });
 
-        // Destacar link do menu ativo durante o scroll
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
