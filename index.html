@@ -487,7 +487,6 @@
             color: #ff0000;
         }
 
-        /* ESTILOS DA ISO PLAY - OTIMIZADO PARA CELULAR */
         .iso-play-section {
             background: #f8f9fa;
             padding: 60px 0;
@@ -502,13 +501,32 @@
             transform: scale(0.98);
         }
         
-        .audio-btn, .quiz-btn {
-            transition: all 0.2s ease;
+        .audio-btn {
+            background: #ff0000;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
             cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
+            margin-left: 0.5rem;
+            transition: all 0.2s ease;
         }
         
-        .audio-btn:active, .quiz-btn:active {
+        .audio-btn:active {
+            opacity: 0.7;
+            transform: scale(0.95);
+        }
+        
+        .quiz-btn {
+            padding: 0.5rem 1rem;
+            background: #e9ecef;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .quiz-btn:active {
             opacity: 0.7;
             transform: scale(0.95);
         }
@@ -528,7 +546,6 @@
             font-size: 0.85rem;
         }
 
-        /* Grid responsivo para as lições */
         #lessons-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -536,7 +553,6 @@
             margin-bottom: 2rem;
         }
 
-        /* Conteúdo da lição responsivo */
         #lesson-content {
             background: white;
             border-radius: 20px;
@@ -557,52 +573,6 @@
             .warning-banner p {
                 font-size: 0.75rem;
             }
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .testimonial-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            overflow: hidden;
-            border: 3px solid #ff0000;
-        }
-
-        .testimonial-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-name {
-            font-weight: bold;
-            color: #1a2a4f;
-        }
-
-        .testimonial-role {
-            color: #999;
-            font-size: 14px;
         }
 
         .cta {
@@ -669,11 +639,6 @@
             flex-wrap: wrap;
         }
 
-        .contact-info i {
-            font-size: 24px;
-            color: #ff0000;
-        }
-
         .address-box {
             background: rgba(255,255,255,0.1);
             padding: 20px;
@@ -734,10 +699,6 @@
             gap: 10px;
         }
 
-        .whatsapp-card .btn:hover {
-            background: #20b859;
-        }
-
         footer {
             background: #0f1a2f;
             color: white;
@@ -754,126 +715,6 @@
             text-decoration: none;
             margin: 0 10px;
             font-size: 20px;
-        }
-
-        .social-links a:hover {
-            color: #ff4d4d;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                gap: 12px;
-                justify-content: center;
-            }
-            
-            nav a {
-                font-size: 12px;
-            }
-            
-            nav a.iso-play-link {
-                padding: 5px 12px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero h1:first-child {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .about-content,
-            .contact-content,
-            .methodology-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                order: -1;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-            
-            section h2 {
-                font-size: 28px;
-            }
-            
-            .schedules-highlight h3 {
-                font-size: 24px;
-            }
-            
-            .schedules-highlight .price {
-                font-size: 22px;
-            }
-            
-            .cta h2 {
-                font-size: 28px;
-            }
-            
-            .cta p {
-                font-size: 16px;
-            }
-            
-            .btn {
-                padding: 12px 30px;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 28px;
-            }
-            
-            .logo-img {
-                height: 50px;
-                max-width: 50px;
-            }
-            
-            .logo-main {
-                font-size: 24px;
-            }
-            
-            .logo-sub {
-                font-size: 10px;
-            }
-            
-            .schedule-card h4 {
-                font-size: 20px;
-            }
-            
-            .schedule-card .time {
-                font-size: 20px;
-            }
-            
-            .course-name {
-                font-size: 20px;
-            }
-            
-            .whatsapp-card {
-                padding: 25px;
-            }
-            
-            .whatsapp-card .btn {
-                font-size: 18px;
-                padding: 15px 30px;
-            }
         }
 
         .map-container {
@@ -901,29 +742,91 @@
             margin-bottom: 10px;
             text-transform: uppercase;
         }
-        
-        /* Progresso do usuário */
-        .progress-badge {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #1a2a4f;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: bold;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            z-index: 999;
-            display: none;
-        }
-        
+
         @media (max-width: 768px) {
-            .progress-badge {
-                bottom: 10px;
-                right: 10px;
-                padding: 8px 12px;
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                gap: 12px;
+                justify-content: center;
+            }
+            nav a {
+                font-size: 12px;
+            }
+            nav a.iso-play-link {
+                padding: 5px 12px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .about-content, .contact-content, .methodology-content {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                order: -1;
+            }
+            section {
+                padding: 50px 0;
+            }
+            section h2 {
+                font-size: 28px;
+            }
+            .schedules-highlight h3 {
+                font-size: 24px;
+            }
+            .schedules-highlight .price {
+                font-size: 22px;
+            }
+            .cta h2 {
+                font-size: 28px;
+            }
+            .cta p {
+                font-size: 16px;
+            }
+            .btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .logo-img {
+                height: 50px;
+                max-width: 50px;
+            }
+            .logo-main {
+                font-size: 24px;
+            }
+            .logo-sub {
                 font-size: 10px;
+            }
+            .schedule-card h4 {
+                font-size: 20px;
+            }
+            .schedule-card .time {
+                font-size: 20px;
+            }
+            .course-name {
+                font-size: 20px;
+            }
+            .whatsapp-card {
+                padding: 25px;
+            }
+            .whatsapp-card .btn {
+                font-size: 18px;
+                padding: 15px 30px;
             }
         }
     </style>
@@ -958,7 +861,7 @@
             <h1><span>#VEMPRÁÍSO</span></h1>
             <h1>Escola de Inglês Híbrida</h1>
             <p>"Não é sobre explicar regra. É sobre automatizar a fala."</p>
-            <a href="https://wa.me/5538998290966" class="btn" target="_blank" rel="noopener noreferrer">📲 Fale Conosco no WhatsApp</a>
+            <a href="https://wa.me/5538998290966" class="btn" target="_blank">📲 Fale Conosco no WhatsApp</a>
         </div>
     </section>
 
@@ -968,13 +871,10 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>O <strong>ÍSO Centro Educacional</strong> é referência no ensino de inglês em <strong>São João do Paraíso - MG</strong>. Nossa abordagem comunicativa e moderna prepara os alunos para os desafios de um mundo globalizado.</p>
-                    
                     <div class="about-highlight">
                         <p>"Você pode estudar inglês por anos… ou aprender do jeito certo desde o começo."</p>
                     </div>
-                    
                     <p>Aqui na ÍSO, aprender inglês não é decorar. É viver o idioma desde cedo, com metodologia que prioriza a comunicação real e a automação da fala, não apenas regras gramaticais.</p>
-                    
                     <div style="margin-top: 20px; background: #ff0000; color: white; padding: 15px; border-radius: 10px; text-align: center;">
                         <p style="font-weight: bold; margin-bottom: 5px;">📍 NOVO ENDEREÇO!</p>
                         <p style="margin: 0;">Estamos em novas instalações em São João do Paraíso. Venha nos visitar!</p>
@@ -1041,7 +941,6 @@
                         <div class="time">14:00 - 15:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
-                    
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
                         <h4>Jaguar: 2 horas de aula</h4>
@@ -1049,7 +948,6 @@
                         <div class="time">15:00 - 17:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
-                    
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
                         <h4>Tiger 2</h4>
@@ -1057,7 +955,6 @@
                         <div class="time">14:00 - 16:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
-                    
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
                         <h4>Tiger 1</h4>
@@ -1065,7 +962,6 @@
                         <div class="time">14:00 - 15:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
-                    
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
                         <h4>Panda</h4>
@@ -1073,7 +969,6 @@
                         <div class="time">15:00 - 16:00</div>
                         <span class="schedule-tag">Presencial</span>
                     </div>
-                    
                     <div class="schedule-card">
                         <span class="modality-badge">🏫 Presencial</span>
                         <h4>Eagle</h4>
@@ -1103,29 +998,16 @@
                         <div class="course-emoji">🐰</div>
                         <div class="course-name">Baby Bunny</div>
                         <div class="course-age">Crianças pequenas</div>
-                        <div class="course-description">
-                            Aprender pode (e deve!) ser divertido desde cedo. Pensado para crianças pequenas, com aulas lúdicas, músicas, cores e muito carinho.
-                        </div>
-                        <ul class="course-features">
-                            <li>Aprendizado no tempo certo</li>
-                            <li>Ambiente seguro e acolhedor</li>
-                            <li>Músicas e atividades lúdicas</li>
-                        </ul>
+                        <div class="course-description">Aprender pode (e deve!) ser divertido desde cedo. Pensado para crianças pequenas, com aulas lúdicas, músicas, cores e muito carinho.</div>
+                        <ul class="course-features"><li>Aprendizado no tempo certo</li><li>Ambiente seguro e acolhedor</li><li>Músicas e atividades lúdicas</li></ul>
                         <span class="course-tag">Aula experimental</span>
                     </div>
-                    
                     <div class="course-card">
                         <div class="course-emoji">🐟</div>
                         <div class="course-name">Fish</div>
                         <div class="course-age">A partir de 5-6 anos</div>
-                        <div class="course-description">
-                            Curiosidade, criatividade e descobertas todos os dias. As crianças aprendem de forma leve, com atividades que estimulam o raciocínio, a comunicação e a autonomia.
-                        </div>
-                        <ul class="course-features">
-                            <li>Ensino adequado à fase da criança</li>
-                            <li>Aprender brincando</li>
-                            <li>Estímulo à comunicação</li>
-                        </ul>
+                        <div class="course-description">Curiosidade, criatividade e descobertas todos os dias. As crianças aprendem de forma leve, com atividades que estimulam o raciocínio, a comunicação e a autonomia.</div>
+                        <ul class="course-features"><li>Ensino adequado à fase da criança</li><li>Aprender brincando</li><li>Estímulo à comunicação</li></ul>
                         <span class="course-tag">Aula experimental</span>
                     </div>
                 </div>
@@ -1138,14 +1020,8 @@
                         <div class="course-emoji">🦅</div>
                         <div class="course-name">Eagle</div>
                         <div class="course-age">7 a 9 anos</div>
-                        <div class="course-description">
-                            Do vocabulário à comunicação real. No Eagle, o aluno aprende a contar histórias, falar sobre o passado e se expressar com clareza e segurança.
-                        </div>
-                        <ul class="course-features">
-                            <li>Expansão de vocabulário</li>
-                            <li>Comunicação confiante</li>
-                            <li>Aprendizado em novo patamar</li>
-                        </ul>
+                        <div class="course-description">Do vocabulário à comunicação real. No Eagle, o aluno aprende a contar histórias, falar sobre o passado e se expressar com clareza e segurança.</div>
+                        <ul class="course-features"><li>Expansão de vocabulário</li><li>Comunicação confiante</li><li>Aprendizado em novo patamar</li></ul>
                         <span class="course-tag">Matrículas abertas</span>
                     </div>
                 </div>
@@ -1158,29 +1034,16 @@
                         <div class="course-emoji">🐯</div>
                         <div class="course-name">Tiger I</div>
                         <div class="course-age">11 a 13 anos</div>
-                        <div class="course-description">
-                            Uma base sólida para crescer e avançar com segurança. O inglês se torna parte da rotina do aluno, com projetos que desenvolvem vocabulário, confiança e expressão pessoal.
-                        </div>
-                        <ul class="course-features">
-                            <li>Falar sobre si e o mundo</li>
-                            <li>Aprender de forma natural</li>
-                            <li>Inglês como aventura diária</li>
-                        </ul>
+                        <div class="course-description">Uma base sólida para crescer e avançar com segurança. O inglês se torna parte da rotina do aluno, com projetos que desenvolvem vocabulário, confiança e expressão pessoal.</div>
+                        <ul class="course-features"><li>Falar sobre si e o mundo</li><li>Aprender de forma natural</li><li>Inglês como aventura diária</li></ul>
                         <span class="course-tag">Aula experimental</span>
                     </div>
-                    
                     <div class="course-card">
                         <div class="course-emoji">🐯</div>
                         <div class="course-name">Tiger II</div>
                         <div class="course-age">13 a 15 anos</div>
-                        <div class="course-description">
-                            Estrutura, fluência e maturidade linguística. O aluno aprimora escrita, fala e compreensão, se preparando para alcançar o nível B1 com segurança.
-                        </div>
-                        <ul class="course-features">
-                            <li>Temas reais e atuais</li>
-                            <li>Debates e projetos</li>
-                            <li>Evolução contínua</li>
-                        </ul>
+                        <div class="course-description">Estrutura, fluência e maturidade linguística. O aluno aprimora escrita, fala e compreensão, se preparando para alcançar o nível B1 com segurança.</div>
+                        <ul class="course-features"><li>Temas reais e atuais</li><li>Debates e projetos</li><li>Evolução contínua</li></ul>
                         <span class="course-tag">Matrículas abertas</span>
                     </div>
                 </div>
@@ -1193,29 +1056,16 @@
                         <div class="course-emoji">🐼</div>
                         <div class="course-name">Panda I</div>
                         <div class="course-age">15 a 17 anos</div>
-                        <div class="course-description">
-                            O inglês que prepara para o futuro. O adolescente desenvolve autonomia, argumentação e escrita clara, caminhando para um B2 de verdade.
-                        </div>
-                        <ul class="course-features">
-                            <li>Debates e apresentações</li>
-                            <li>Temas atuais</li>
-                            <li>Escrita e fluência avançadas</li>
-                        </ul>
+                        <div class="course-description">O inglês que prepara para o futuro. O adolescente desenvolve autonomia, argumentação e escrita clara, caminhando para um B2 de verdade.</div>
+                        <ul class="course-features"><li>Debates e apresentações</li><li>Temas atuais</li><li>Escrita e fluência avançadas</li></ul>
                         <span class="course-tag">Matrículas abertas</span>
                     </div>
-                    
                     <div class="course-card">
                         <div class="course-emoji">🐼</div>
                         <div class="course-name">Panda II</div>
                         <div class="course-age">15 a 18 anos</div>
-                        <div class="course-description">
-                            Inglês avançado para pensar, argumentar e liderar. Transforma o inglês em ferramenta real para estudos e futuro, desenvolvendo nível B2 com preparação para pré-C1.
-                        </div>
-                        <ul class="course-features">
-                            <li>Debates e projetos</li>
-                            <li>Escrita avançada</li>
-                            <li>Pensamento crítico</li>
-                        </ul>
+                        <div class="course-description">Inglês avançado para pensar, argumentar e liderar. Transforma o inglês em ferramenta real para estudos e futuro, desenvolvendo nível B2 com preparação para pré-C1.</div>
+                        <ul class="course-features"><li>Debates e projetos</li><li>Escrita avançada</li><li>Pensamento crítico</li></ul>
                         <span class="course-tag">Matrículas abertas</span>
                     </div>
                 </div>
@@ -1228,14 +1078,8 @@
                         <div class="course-emoji">🦁</div>
                         <div class="course-name">LION</div>
                         <div class="course-age">+16 anos</div>
-                        <div class="course-description">
-                            Onde o inglês alcança o nível acadêmico e profissional. Para quem precisa usar o inglês com excelência, com foco em argumentação, linguagem formal e produção de textos.
-                        </div>
-                        <ul class="course-features">
-                            <li>Preparação para universidades</li>
-                            <li>Mercado global</li>
-                            <li>Certificações internacionais</li>
-                        </ul>
+                        <div class="course-description">Onde o inglês alcança o nível acadêmico e profissional. Para quem precisa usar o inglês com excelência, com foco em argumentação, linguagem formal e produção de textos.</div>
+                        <ul class="course-features"><li>Preparação para universidades</li><li>Mercado global</li><li>Certificações internacionais</li></ul>
                         <span class="course-tag">Curso anual - 4 módulos</span>
                     </div>
                 </div>
@@ -1248,107 +1092,35 @@
         </div>
     </section>
 
-    <!-- ==================== SEÇÃO ÍSO PLAY COM 6 LIÇÕES ==================== -->
+    <!-- ==================== SEÇÃO ÍSO PLAY COM LIÇÕES EXPANDIDAS ==================== -->
     <section class="iso-play-section" id="iso-play">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            
-            <!-- AVISO: DEMONSTRAÇÃO -->
+        <div class="container">
             <div class="warning-banner">
                 <p>⚠️ <strong>ATENÇÃO:</strong> Esta é uma <strong>demonstração interativa</strong> com exercícios básicos.<br>
-                Na <strong style="color: #1a2a4f;">ÍSO Centro Educacional</strong>, suas aulas serão com <strong style="color: #ff0000;">professores 100% reais e humanos</strong>, 
+                Na <strong style="color: #1a2a4f;">ÍSO Centro Educacional</strong>, suas aulas serão com <strong style="color: #ff0000;">professores altamente qualificados e humanos</strong>, 
                 com acompanhamento personalizado e metodologia exclusiva!</p>
             </div>
 
-            <!-- CABEÇALHO -->
             <div style="text-align: center; margin-bottom: 2rem;">
                 <span style="background: #ff0000; color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: bold;">🎧 EXPERIMENTE AGORA</span>
                 <h2 style="color: #1a2a4f; font-size: 1.8rem; margin: 1rem 0 0.5rem;">ÍSO Play: Experimente o Método</h2>
-                <p style="color: #666666; font-size: 1rem;">Conheça nosso estilo de ensino com 6 lições gratuitas</p>
-                <p style="color: #ff0000; font-size: 0.85rem; margin-top: 0.5rem;">
-                    ⭐ São apenas exercícios básicos. Nossas aulas reais são muito mais completas!
-                </p>
+                <p style="color: #666666; font-size: 1rem;">Conheça nosso estilo de ensino com 6 lições completas</p>
+                <p style="color: #ff0000; font-size: 0.85rem; margin-top: 0.5rem;">⭐ São apenas exercícios básicos. Nossas aulas reais são muito mais completas!</p>
             </div>
 
-            <!-- CARDS DAS LIÇÕES - 6 LIÇÕES -->
             <div id="lessons-container">
-                <!-- Lição 1: Saudações -->
-                <div class="lesson-card" data-lesson="1" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
-                    <div style="padding: 1.2rem;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">👋</div>
-                        <h3 style="color: #1a2a4f; margin: 0 0 0.3rem; font-size: 1.3rem;">Saudações Básicas</h3>
-                        <p style="color: #666666; font-size: 0.85rem;">Aprenda cumprimentos e apresentações essenciais.</p>
-                        <div style="margin-top: 0.8rem;">
-                            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">🔊 Áudio incluso</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Lição 2: Números -->
-                <div class="lesson-card" data-lesson="2" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
-                    <div style="padding: 1.2rem;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔢</div>
-                        <h3 style="color: #1a2a4f; margin: 0 0 0.3rem; font-size: 1.3rem;">Números de 1 a 10</h3>
-                        <p style="color: #666666; font-size: 0.85rem;">Pronúncia e escrita dos primeiros números.</p>
-                        <div style="margin-top: 0.8rem;">
-                            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">🎮 Exercício</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Lição 3: Cores -->
-                <div class="lesson-card" data-lesson="3" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
-                    <div style="padding: 1.2rem;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
-                        <h3 style="color: #1a2a4f; margin: 0 0 0.3rem; font-size: 1.3rem;">Cores em Inglês</h3>
-                        <p style="color: #666666; font-size: 0.85rem;">Identifique e pronuncie as cores principais.</p>
-                        <div style="margin-top: 0.8rem;">
-                            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">🎮 Exercício</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Lição 4: Verbos Ação -->
-                <div class="lesson-card" data-lesson="4" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
-                    <div style="padding: 1.2rem;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏃</div>
-                        <h3 style="color: #1a2a4f; margin: 0 0 0.3rem; font-size: 1.3rem;">Verbos de Ação</h3>
-                        <p style="color: #666666; font-size: 0.85rem;">Aprenda verbos como correr, pular, comer e beber.</p>
-                        <div style="margin-top: 0.8rem;">
-                            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">🔊 Áudio + Exercício</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Lição 5: Família -->
-                <div class="lesson-card" data-lesson="5" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
-                    <div style="padding: 1.2rem;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">👨‍👩‍👧‍👦</div>
-                        <h3 style="color: #1a2a4f; margin: 0 0 0.3rem; font-size: 1.3rem;">Membros da Família</h3>
-                        <p style="color: #666666; font-size: 0.85rem;">Aprenda como dizer pai, mãe, irmão e irmã.</p>
-                        <div style="margin-top: 0.8rem;">
-                            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">🔊 Áudio + Exercício</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Lição 6: Animais -->
-                <div class="lesson-card" data-lesson="6" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
-                    <div style="padding: 1.2rem;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐶</div>
-                        <h3 style="color: #1a2a4f; margin: 0 0 0.3rem; font-size: 1.3rem;">Animais em Inglês</h3>
-                        <p style="color: #666666; font-size: 0.85rem;">Aprenda os nomes dos animais mais comuns.</p>
-                        <div style="margin-top: 0.8rem;">
-                            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem;">🔊 Áudio + Exercício</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="lesson-card" data-lesson="1"><div style="font-size: 2rem;">👋</div><h3>Saudações Básicas</h3><p>Aprenda cumprimentos e apresentações essenciais.</p><span>🔊 10+ Áudios</span></div>
+                <div class="lesson-card" data-lesson="2"><div style="font-size: 2rem;">🔢</div><h3>Números de 1 a 20</h3><p>Aprenda números, horas e preços.</p><span>🔊 20+ Áudios</span></div>
+                <div class="lesson-card" data-lesson="3"><div style="font-size: 2rem;">🎨</div><h3>Cores em Inglês</h3><p>12 cores com pronúncia e exercícios.</p><span>🎨 12 Cores + Quiz</span></div>
+                <div class="lesson-card" data-lesson="4"><div style="font-size: 2rem;">🏃</div><h3>Verbos de Ação</h3><p>12 verbos essenciais do dia a dia.</p><span>🔊 12 Verbos</span></div>
+                <div class="lesson-card" data-lesson="5"><div style="font-size: 2rem;">👨‍👩‍👧‍👦</div><h3>Membros da Família</h3><p>12 membros da família com áudio.</p><span>👨‍👩‍👧‍👦 12 Membros</span></div>
+                <div class="lesson-card" data-lesson="6"><div style="font-size: 2rem;">🐶</div><h3>Animais em Inglês</h3><p>12 animais com pronúncia e exercícios.</p><span>🐶 12 Animais</span></div>
             </div>
 
-            <!-- ÁREA DE CONTEÚDO DA LIÇÃO -->
-            <div id="lesson-content" style="background: white; border-radius: 20px; padding: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: none;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap;">
-                    <h3 id="lesson-title" style="color: #1a2a4f; margin: 0; font-size: 1.3rem;"></h3>
-                    <button id="close-lesson" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666666; padding: 5px;">✕</button>
+            <div id="lesson-content" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 id="lesson-title" style="color: #1a2a4f;"></h3>
+                    <button id="close-lesson" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">✕</button>
                 </div>
                 <div id="lesson-body"></div>
             </div>
@@ -1359,7 +1131,7 @@
         <div class="container">
             <h2>⚠️ Vagas Limitadas!</h2>
             <p>Não perca a oportunidade de aprender inglês do jeito certo, com uma metodologia que realmente funciona.</p>
-            <a href="https://wa.me/5538998290966" class="btn" target="_blank" rel="noopener noreferrer">📲 Garanta Sua Vaga Agora</a>
+            <a href="https://wa.me/5538998290966" class="btn" target="_blank">📲 Garanta Sua Vaga Agora</a>
         </div>
     </section>
 
@@ -1369,59 +1141,27 @@
             <div class="contact-content">
                 <div>
                     <div class="new-address-badge">🆕 NOVO ENDEREÇO</div>
-                    
                     <ul class="contact-info">
-                        <li>
-                            <i>📍</i>
-                            <span>São João do Paraíso - MG</span>
-                        </li>
-                        <li>
-                            <i>📞</i>
-                            <span>(38) 99829-0966</span>
-                        </li>
-                        <li>
-                            <i>⏰</i>
-                            <span>Segunda a Sexta: 9h às 21h | Sábado: 9h às 13h</span>
-                        </li>
-                        <li>
-                            <i>📱</i>
-                            <span>@iso_centroeducacional</span>
-                        </li>
+                        <li><i>📍</i> <span>São João do Paraíso - MG</span></li>
+                        <li><i>📞</i> <span>(38) 99829-0966</span></li>
+                        <li><i>⏰</i> <span>Segunda a Sexta: 9h às 21h | Sábado: 9h às 13h</span></li>
+                        <li><i>📱</i> <span>@iso_centroeducacional</span></li>
                     </ul>
-                    
                     <div class="address-box">
                         <h3>📍 Nosso Endereço</h3>
-                        <p>
-                            <strong>ÍSO Centro Educacional</strong><br>
-                            Av. Dr. Osório Adrião da Rocha, 796<br>
-                            São João do Paraíso - MG<br>
-                            CEP: 39540-000
-                        </p>
-                        <p style="margin-top: 10px; color: #ff0000; font-weight: bold;">
-                            ⚡ Fácil acesso e estacionamento no local
-                        </p>
+                        <p><strong>ÍSO Centro Educacional</strong><br>Av. Dr. Osório Adrião da Rocha, 796<br>São João do Paraíso - MG<br>CEP: 39540-000</p>
+                        <p style="margin-top: 10px; color: #ff0000; font-weight: bold;">⚡ Fácil acesso e estacionamento no local</p>
                     </div>
-                    
                     <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.680016439112!2d-41.98186352405082!3d-15.312657889336305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x74a3d9a53fa37a1%3A0x6c4b6c7c7f8f8f8f!2sAv.%20Dr.%20Os%C3%B3rio%20Adri%C3%A3o%20da%20Rocha%2C%20796%20-%20S%C3%A3o%20Jo%C3%A3o%20do%20Para%C3%ADso%2C%20MG%2C%2039540-000!5e0!3m2!1spt-BR!2sbr!4v1710801234567!5m2!1spt-BR!2sbr" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Mapa da ÍSO Centro Educacional">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.680016439112!2d-41.98186352405082!3d-15.312657889336305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x74a3d9a53fa37a1%3A0x6c4b6c7c7f8f8f8f!2sAv.%20Dr.%20Os%C3%B3rio%20Adri%C3%A3o%20da%20Rocha%2C%20796%20-%20S%C3%A3o%20Jo%C3%A3o%20do%20Para%C3%ADso%2C%20MG%2C%2039540-000!5e0!3m2!1spt-BR!2sbr!4v1710801234567!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" title="Mapa da ÍSO Centro Educacional"></iframe>
                     </div>
                 </div>
-                
                 <div class="whatsapp-card">
                     <div class="whatsapp-icon">📱</div>
                     <h3>Fale Conosco no WhatsApp</h3>
                     <p>📞 (38) 99829-0966</p>
                     <p>✅ Atendimento rápido e personalizado<br>✅ Tire suas dúvidas sobre cursos e horários<br>✅ Faça sua matrícula diretamente pelo celular</p>
-                    <a href="https://wa.me/5538998290966" class="btn" target="_blank" rel="noopener noreferrer">
-                        👉 Enviar Mensagem Agora
-                    </a>
-                    <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">Clique no botão e comece a conversar</p>
+                    <a href="https://wa.me/5538998290966" class="btn" target="_blank">👉 Enviar Mensagem Agora</a>
                 </div>
             </div>
         </div>
@@ -1430,315 +1170,127 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 ÍSO Centro Educacional. Todos os direitos reservados.</p>
-            <p><strong>Endereço:</strong> Av. Dr. Osório Adrião da Rocha, 796 - São João do Paraíso/MG - CEP: 39540-000</p>
+            <p><strong>Endereço:</strong> Av. Dr. Osório Adrião da Rocha, 796 - São João do Paraíso/MG</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/iso_centroeducacional" target="_blank" rel="noopener noreferrer">📷 @iso_centroeducacional</a>
-                <a href="https://wa.me/5538998290966" target="_blank" rel="noopener noreferrer">📱 WhatsApp</a>
+                <a href="https://www.instagram.com/iso_centroeducacional" target="_blank">📷 @iso_centroeducacional</a>
+                <a href="https://wa.me/5538998290966" target="_blank">📱 WhatsApp</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // VOZ MAIS NATURAL - usa vozes do sistema
         let currentVoice = null;
         
-        // Carrega as vozes disponíveis
         function loadVoices() {
-            return new Promise((resolve) => {
-                let voices = window.speechSynthesis.getVoices();
-                if (voices.length) {
-                    currentVoice = voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Samantha')) ||
-                                   voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Google')) ||
-                                   voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Microsoft')) ||
-                                   voices.find(voice => voice.lang === 'en-US');
-                    resolve(currentVoice);
-                } else {
-                    window.speechSynthesis.onvoiceschanged = () => {
-                        voices = window.speechSynthesis.getVoices();
-                        currentVoice = voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Samantha')) ||
-                                       voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Google')) ||
-                                       voices.find(voice => voice.lang === 'en-US');
-                        resolve(currentVoice);
-                    };
-                }
-            });
+            let voices = window.speechSynthesis.getVoices();
+            if (voices.length) {
+                currentVoice = voices.find(v => v.lang === 'en-US' && v.name.includes('Google')) || voices.find(v => v.lang === 'en-US');
+            } else {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    voices = window.speechSynthesis.getVoices();
+                    currentVoice = voices.find(v => v.lang === 'en-US' && v.name.includes('Google')) || voices.find(v => v.lang === 'en-US');
+                };
+            }
         }
-        
         loadVoices();
 
         function speak(text) {
-            window.speechSynthesis.cancel();
+            if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
             setTimeout(() => {
                 const utterance = new SpeechSynthesisUtterance(text);
                 utterance.lang = 'en-US';
-                utterance.rate = 0.85;
-                utterance.pitch = 1.0;
-                if (currentVoice) {
-                    utterance.voice = currentVoice;
-                }
+                utterance.rate = 0.9;
+                if (currentVoice) utterance.voice = currentVoice;
                 window.speechSynthesis.speak(utterance);
             }, 50);
         }
 
-        // Conteúdo das lições
         const lessons = {
-            1: {
-                title: "👋 Saudações Básicas - Demonstração",
-                content: getGreetingsContent()
-            },
-            2: {
-                title: "🔢 Números de 1 a 10 - Demonstração",
-                content: getNumbersContent()
-            },
-            3: {
-                title: "🎨 Cores em Inglês - Demonstração",
-                content: getColorsContent()
-            },
-            4: {
-                title: "🏃 Verbos de Ação - Demonstração",
-                content: getVerbsContent()
-            },
-            5: {
-                title: "👨‍👩‍👧‍👦 Membros da Família - Demonstração",
-                content: getFamilyContent()
-            },
-            6: {
-                title: "🐶 Animais em Inglês - Demonstração",
-                content: getAnimalsContent()
-            }
+            1: { title: "👋 Saudações Básicas", content: `<div class="warning-banner" style="margin-bottom:1rem">💡 <strong>Na ÍSO real:</strong> Você pratica diálogos com professores altamente qualificados!</div><h4>🎧 Clique para ouvir:</h4><div style="background:#f8f9fa;padding:1rem;border-radius:16px"><p>Hello! <button class="audio-btn" data-word="Hello">🔊</button> - Olá!</p><p>Good morning! <button class="audio-btn" data-word="Good morning">🔊</button> - Bom dia!</p><p>Good afternoon! <button class="audio-btn" data-word="Good afternoon">🔊</button> - Boa tarde!</p><p>Good evening! <button class="audio-btn" data-word="Good evening">🔊</button> - Boa noite!</p><p>How are you? <button class="audio-btn" data-word="How are you">🔊</button> - Como você está?</p><p>I'm fine, thank you! <button class="audio-btn" data-word="I'm fine, thank you">🔊</button> - Estou bem, obrigado!</p><p>Nice to meet you! <button class="audio-btn" data-word="Nice to meet you">🔊</button> - Prazer em conhecê-lo!</p><p>See you later! <button class="audio-btn" data-word="See you later">🔊</button> - Até mais tarde!</p><p>Goodbye! <button class="audio-btn" data-word="Goodbye">🔊</button> - Tchau!</p><p>What's your name? <button class="audio-btn" data-word="What's your name">🔊</button> - Qual é o seu nome?</p><p>My name is... <button class="audio-btn" data-word="My name is">🔊</button> - Meu nome é...</p></div><div style="background:#e9ecef;padding:1rem;border-radius:16px;margin-top:1rem;text-align:center">🎓 <strong>Na ÍSO real:</strong> Professores corrigem sua pronúncia em tempo real!</div></div>` },
+            2: { title: "🔢 Números de 1 a 20", content: `<div class="warning-banner" style="margin-bottom:1rem">💡 <strong>Na ÍSO real:</strong> Aprendemos números em situações reais (horários, preços, idades)!</div><h4>🎧 Números de 1 a 20:</h4><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;background:#f8f9fa;padding:1rem;border-radius:16px;margin-bottom:1rem">${[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map(n => {const w=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty'];return `<div><strong>${n}</strong><br><small>${w[n-1]}</small> <button class="audio-btn" data-word="${w[n-1]}">🔊</button></div>`}).join('')}</div><h4>🎮 Exercício: Qual número é "fifteen"?</h4><div><button class="quiz-btn" data-correct="15">13</button> <button class="quiz-btn" data-correct="15">15</button> <button class="quiz-btn" data-correct="15">17</button></div><p id="quiz-feedback" style="margin-top:0.5rem"></p><div style="background:#e9ecef;padding:1rem;border-radius:16px;margin-top:1rem;text-align:center">🎓 <strong>Na ÍSO real:</strong> Você aprende números fazendo compras, perguntando horas e preços!</div></div>` },
+            3: { title: "🎨 Cores em Inglês", content: `<div class="warning-banner" style="margin-bottom:1rem">💡 <strong>Na ÍSO real:</strong> Aprendemos cores com atividades lúdicas e jogos!</div><h4>🎧 12 Cores:</h4><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;background:#f8f9fa;padding:1rem;border-radius:16px;margin-bottom:1rem"><div><div style="display:inline-block;width:20px;height:20px;background:red;border-radius:50%"></div> Red <button class="audio-btn" data-word="red">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:blue;border-radius:50%"></div> Blue <button class="audio-btn" data-word="blue">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:yellow;border-radius:50%"></div> Yellow <button class="audio-btn" data-word="yellow">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:green;border-radius:50%"></div> Green <button class="audio-btn" data-word="green">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:orange;border-radius:50%"></div> Orange <button class="audio-btn" data-word="orange">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:purple;border-radius:50%"></div> Purple <button class="audio-btn" data-word="purple">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:pink;border-radius:50%"></div> Pink <button class="audio-btn" data-word="pink">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:brown;border-radius:50%"></div> Brown <button class="audio-btn" data-word="brown">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:black;border-radius:50%"></div> Black <button class="audio-btn" data-word="black">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:white;border:1px solid #ccc;border-radius:50%"></div> White <button class="audio-btn" data-word="white">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:gray;border-radius:50%"></div> Gray <button class="audio-btn" data-word="gray">🔊</button></div><div><div style="display:inline-block;width:20px;height:20px;background:gold;border-radius:50%"></div> Gold <button class="audio-btn" data-word="gold">🔊</button></div></div><h4>🎮 Exercício: Digite a cor em inglês</h4><div>🔴 Vermelho: <input type="text" id="color1"> <button onclick="checkColor('color1','red')">Verificar</button></div><div style="margin-top:0.5rem">🔵 Azul: <input type="text" id="color2"> <button onclick="checkColor('color2','blue')">Verificar</button></div><div style="margin-top:0.5rem">🟡 Amarelo: <input type="text" id="color3"> <button onclick="checkColor('color3','yellow')">Verificar</button></div><p id="color-feedback" style="margin-top:0.5rem"></p></div>` },
+            4: { title: "🏃 Verbos de Ação", content: `<div class="warning-banner" style="margin-bottom:1rem">💡 <strong>Na ÍSO real:</strong> Verbos são ensinados em contexto, com ações reais e dramatizações!</div><h4>🎧 12 Verbos Essenciais:</h4><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;background:#f8f9fa;padding:1rem;border-radius:16px;margin-bottom:1rem"><div>🏃 Run <button class="audio-btn" data-word="run">🔊</button> - Correr</div><div>🚶 Walk <button class="audio-btn" data-word="walk">🔊</button> - Andar</div><div>🍎 Eat <button class="audio-btn" data-word="eat">🔊</button> - Comer</div><div>💧 Drink <button class="audio-btn" data-word="drink">🔊</button> - Beber</div><div>😴 Sleep <button class="audio-btn" data-word="sleep">🔊</button> - Dormir</div><div>📖 Read <button class="audio-btn" data-word="read">🔊</button> - Ler</div><div>✍️ Write <button class="audio-btn" data-word="write">🔊</button> - Escrever</div><div>🎵 Sing <button class="audio-btn" data-word="sing">🔊</button> - Cantar</div><div>💃 Dance <button class="audio-btn" data-word="dance">🔊</button> - Dançar</div><div>🏊 Swim <button class="audio-btn" data-word="swim">🔊</button> - Nadar</div><div>🚗 Drive <button class="audio-btn" data-word="drive">🔊</button> - Dirigir</div><div>✈️ Fly <button class="audio-btn" data-word="fly">🔊</button> - Voar</div></div><h4>🎮 Complete a frase: I ___ water. (beber)</h4><input type="text" id="verb1"> <button onclick="checkVerb('verb1','drink')">Verificar</button><p id="verb-feedback" style="margin-top:0.5rem"></p></div>` },
+            5: { title: "👨‍👩‍👧‍👦 Membros da Família", content: `<div class="warning-banner" style="margin-bottom:1rem">💡 <strong>Na ÍSO real:</strong> Aprendemos família com árvores genealógicas e projetos em família!</div><h4>🎧 12 Membros da Família:</h4><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;background:#f8f9fa;padding:1rem;border-radius:16px;margin-bottom:1rem"><div>👨 Father <button class="audio-btn" data-word="father">🔊</button> - Pai</div><div>👩 Mother <button class="audio-btn" data-word="mother">🔊</button> - Mãe</div><div>👦 Brother <button class="audio-btn" data-word="brother">🔊</button> - Irmão</div><div>👧 Sister <button class="audio-btn" data-word="sister">🔊</button> - Irmã</div><div>👴 Grandfather <button class="audio-btn" data-word="grandfather">🔊</button> - Avô</div><div>👵 Grandmother <button class="audio-btn" data-word="grandmother">🔊</button> - Avó</div><div>👶 Baby <button class="audio-btn" data-word="baby">🔊</button> - Bebê</div><div>👨‍🦰 Uncle <button class="audio-btn" data-word="uncle">🔊</button> - Tio</div><div>👩‍🦰 Aunt <button class="audio-btn" data-word="aunt">🔊</button> - Tia</div><div>👦 Cousin <button class="audio-btn" data-word="cousin">🔊</button> - Primo/Prima</div><div>👨‍🦳 Stepfather <button class="audio-btn" data-word="stepfather">🔊</button> - Padrasto</div><div>👩‍🦳 Stepmother <button class="audio-btn" data-word="stepmother">🔊</button> - Madrasta</div></div><h4>🎮 Como se diz "irmã" em inglês?</h4><input type="text" id="family1"> <button onclick="checkFamily('family1','sister')">Verificar</button><p id="family-feedback" style="margin-top:0.5rem"></p></div>` },
+            6: { title: "🐶 Animais em Inglês", content: `<div class="warning-banner" style="margin-bottom:1rem">💡 <strong>Na ÍSO real:</strong> Aprendemos animais com músicas, jogos e atividades divertidas!</div><h4>🎧 12 Animais:</h4><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;background:#f8f9fa;padding:1rem;border-radius:16px;margin-bottom:1rem"><div>🐶 Dog <button class="audio-btn" data-word="dog">🔊</button> - Cachorro</div><div>🐱 Cat <button class="audio-btn" data-word="cat">🔊</button> - Gato</div><div>🐦 Bird <button class="audio-btn" data-word="bird">🔊</button> - Pássaro</div><div>🐟 Fish <button class="audio-btn" data-word="fish">🔊</button> - Peixe</div><div>🐴 Horse <button class="audio-btn" data-word="horse">🔊</button> - Cavalo</div><div>🐮 Cow <button class="audio-btn" data-word="cow">🔊</button> - Vaca</div><div>🐷 Pig <button class="audio-btn" data-word="pig">🔊</button> - Porco</div><div>🐔 Chicken <button class="audio-btn" data-word="chicken">🔊</button> - Galinha</div><div>🐸 Frog <button class="audio-btn" data-word="frog">🔊</button> - Sapo</div><div>🐒 Monkey <button class="audio-btn" data-word="monkey">🔊</button> - Macaco</div><div>🦁 Lion <button class="audio-btn" data-word="lion">🔊</button> - Leão</div><div>🐧 Penguin <button class="audio-btn" data-word="penguin">🔊</button> - Pinguim</div></div><h4>🎮 Como se diz "gato" em inglês?</h4><input type="text" id="animal1"> <button onclick="checkAnimal('animal1','cat')">Verificar</button><p id="animal-feedback" style="margin-top:0.5rem"></p></div>` }
         };
-        
-        function getGreetingsContent() {
-            return `
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="warning-banner" style="margin-bottom: 0; padding: 0.75rem;">
-                        💡 <strong>Na ÍSO real:</strong> Você pratica diálogos reais com professores nativos!
-                    </div>
-                    <div>
-                        <h4 style="color: #1a2a4f;">🎧 Clique para ouvir:</h4>
-                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 16px;">
-                            <p><strong>Hello!</strong> <button class="audio-btn" data-word="Hello">🔊 Ouvir</button> - Olá!</p>
-                            <p><strong>Good morning!</strong> <button class="audio-btn" data-word="Good morning">🔊 Ouvir</button> - Bom dia!</p>
-                            <p><strong>Good afternoon!</strong> <button class="audio-btn" data-word="Good afternoon">🔊 Ouvir</button> - Boa tarde!</p>
-                            <p><strong>Good evening!</strong> <button class="audio-btn" data-word="Good evening">🔊 Ouvir</button> - Boa noite!</p>
-                            <p><strong>How are you?</strong> <button class="audio-btn" data-word="How are you">🔊 Ouvir</button> - Como você está?</p>
-                            <p><strong>I'm fine, thank you!</strong> <button class="audio-btn" data-word="I'm fine, thank you">🔊 Ouvir</button> - Estou bem, obrigado!</p>
-                        </div>
-                    </div>
-                    <div style="background: #e9ecef; padding: 1rem; border-radius: 16px; text-align: center;">
-                        🎓 <strong>Na ÍSO real:</strong> Você pratica com professores que corrigem sua pronúncia em tempo real!
-                    </div>
-                </div>
-            `;
-        }
-        
-        function getNumbersContent() {
-            return `
-                <div>
-                    <div class="warning-banner" style="margin-bottom: 1rem; padding: 0.75rem;">
-                        💡 <strong>Na ÍSO real:</strong> Aprendemos números em situações reais!
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎧 Clique para ouvir:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; background: #f8f9fa; padding: 1rem; border-radius: 16px; margin: 1rem 0;">
-                        ${[1,2,3,4,5,6,7,8,9,10].map(n => {
-                            const words = ['one','two','three','four','five','six','seven','eight','nine','ten'];
-                            return `<div style="display: flex; justify-content: space-between; align-items: center;"><strong>${n}</strong> - ${words[n-1]} <button class="audio-btn" data-word="${words[n-1]}">🔊</button></div>`;
-                        }).join('')}
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎮 Exercício: Qual número é "seven"?</h4>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0;">
-                        <button class="quiz-btn" data-correct="7" style="padding: 0.5rem 1rem; background: #e9ecef; border: 1px solid #dee2e6; border-radius: 8px;">5</button>
-                        <button class="quiz-btn" data-correct="7" style="padding: 0.5rem 1rem; background: #e9ecef; border: 1px solid #dee2e6; border-radius: 8px;">7</button>
-                        <button class="quiz-btn" data-correct="7" style="padding: 0.5rem 1rem; background: #e9ecef; border: 1px solid #dee2e6; border-radius: 8px;">9</button>
-                    </div>
-                    <p id="quiz-feedback" style="margin-top: 0.5rem; font-weight: bold;"></p>
-                </div>
-            `;
-        }
-        
-        function getColorsContent() {
-            return `
-                <div>
-                    <div class="warning-banner" style="margin-bottom: 1rem; padding: 0.75rem;">
-                        💡 <strong>Na ÍSO real:</strong> Aprendemos cores com atividades lúdicas!
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎧 Clique para ouvir:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; background: #f8f9fa; padding: 1rem; border-radius: 16px; margin: 1rem 0;">
-                        <div><div style="display: inline-block; width: 20px; height: 20px; background: red; border-radius: 50%;"></div> Red <button class="audio-btn" data-word="red">🔊</button></div>
-                        <div><div style="display: inline-block; width: 20px; height: 20px; background: blue; border-radius: 50%;"></div> Blue <button class="audio-btn" data-word="blue">🔊</button></div>
-                        <div><div style="display: inline-block; width: 20px; height: 20px; background: yellow; border-radius: 50%;"></div> Yellow <button class="audio-btn" data-word="yellow">🔊</button></div>
-                        <div><div style="display: inline-block; width: 20px; height: 20px; background: green; border-radius: 50%;"></div> Green <button class="audio-btn" data-word="green">🔊</button></div>
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎮 Exercício: Digite a cor em inglês</h4>
-                    <div id="color-quiz">
-                        <div>🟡 Amarelo: <input type="text" id="color1" placeholder="Digite em inglês"> <button onclick="checkColor('color1', 'yellow')">Verificar</button></div>
-                        <div style="margin-top: 0.5rem;">🔴 Vermelho: <input type="text" id="color2" placeholder="Digite em inglês"> <button onclick="checkColor('color2', 'red')">Verificar</button></div>
-                        <div style="margin-top: 0.5rem;">🔵 Azul: <input type="text" id="color3" placeholder="Digite em inglês"> <button onclick="checkColor('color3', 'blue')">Verificar</button></div>
-                    </div>
-                    <p id="color-feedback" style="margin-top: 0.5rem; font-weight: bold;"></p>
-                </div>
-            `;
-        }
-        
-        function getVerbsContent() {
-            return `
-                <div>
-                    <div class="warning-banner" style="margin-bottom: 1rem; padding: 0.75rem;">
-                        💡 <strong>Na ÍSO real:</strong> Verbos são ensinados em contexto, com ações reais!
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎧 Ações do dia a dia:</h4>
-                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 16px; margin: 1rem 0;">
-                        <p>🏃 <strong>Run</strong> <button class="audio-btn" data-word="run">🔊 Ouvir</button> - Correr</p>
-                        <p>🚶 <strong>Walk</strong> <button class="audio-btn" data-word="walk">🔊 Ouvir</button> - Andar</p>
-                        <p>🍎 <strong>Eat</strong> <button class="audio-btn" data-word="eat">🔊 Ouvir</button> - Comer</p>
-                        <p>💧 <strong>Drink</strong> <button class="audio-btn" data-word="drink">🔊 Ouvir</button> - Beber</p>
-                        <p>😴 <strong>Sleep</strong> <button class="audio-btn" data-word="sleep">🔊 Ouvir</button> - Dormir</p>
-                        <p>📖 <strong>Read</strong> <button class="audio-btn" data-word="read">🔊 Ouvir</button> - Ler</p>
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎮 Complete a frase:</h4>
-                    <p>I ___ water. (beber)</p>
-                    <input type="text" id="verb1" placeholder="Digite o verbo em inglês" style="padding: 0.5rem; border-radius: 8px; border: 1px solid #ddd;">
-                    <button onclick="checkVerb('verb1', 'drink')" style="margin-left: 0.5rem; background: #ff0000; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px;">Verificar</button>
-                    <p id="verb-feedback" style="margin-top: 0.5rem;"></p>
-                </div>
-            `;
-        }
-        
-        function getFamilyContent() {
-            return `
-                <div>
-                    <div class="warning-banner" style="margin-bottom: 1rem; padding: 0.75rem;">
-                        💡 <strong>Na ÍSO real:</strong> Aprendemos família com árvores genealógicas e projetos!
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎧 Membros da Família:</h4>
-                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 16px; margin: 1rem 0;">
-                        <p>👨 <strong>Father / Dad</strong> <button class="audio-btn" data-word="father">🔊 Ouvir</button> - Pai</p>
-                        <p>👩 <strong>Mother / Mom</strong> <button class="audio-btn" data-word="mother">🔊 Ouvir</button> - Mãe</p>
-                        <p>👦 <strong>Brother</strong> <button class="audio-btn" data-word="brother">🔊 Ouvir</button> - Irmão</p>
-                        <p>👧 <strong>Sister</strong> <button class="audio-btn" data-word="sister">🔊 Ouvir</button> - Irmã</p>
-                        <p>👴 <strong>Grandfather</strong> <button class="audio-btn" data-word="grandfather">🔊 Ouvir</button> - Avô</p>
-                        <p>👵 <strong>Grandmother</strong> <button class="audio-btn" data-word="grandmother">🔊 Ouvir</button> - Avó</p>
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎮 Como se diz "irmã" em inglês?</h4>
-                    <input type="text" id="family1" placeholder="Digite em inglês" style="padding: 0.5rem; border-radius: 8px; border: 1px solid #ddd;">
-                    <button onclick="checkFamily('family1', 'sister')" style="margin-left: 0.5rem; background: #ff0000; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px;">Verificar</button>
-                    <p id="family-feedback" style="margin-top: 0.5rem;"></p>
-                </div>
-            `;
-        }
-        
-        function getAnimalsContent() {
-            return `
-                <div>
-                    <div class="warning-banner" style="margin-bottom: 1rem; padding: 0.75rem;">
-                        💡 <strong>Na ÍSO real:</strong> Aprendemos animais com músicas e jogos interativos!
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎧 Animais:</h4>
-                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 16px; margin: 1rem 0;">
-                        <p>🐶 <strong>Dog</strong> <button class="audio-btn" data-word="dog">🔊 Ouvir</button> - Cachorro</p>
-                        <p>🐱 <strong>Cat</strong> <button class="audio-btn" data-word="cat">🔊 Ouvir</button> - Gato</p>
-                        <p>🐦 <strong>Bird</strong> <button class="audio-btn" data-word="bird">🔊 Ouvir</button> - Pássaro</p>
-                        <p>🐟 <strong>Fish</strong> <button class="audio-btn" data-word="fish">🔊 Ouvir</button> - Peixe</p>
-                        <p>🐴 <strong>Horse</strong> <button class="audio-btn" data-word="horse">🔊 Ouvir</button> - Cavalo</p>
-                        <p>🐮 <strong>Cow</strong> <button class="audio-btn" data-word="cow">🔊 Ouvir</button> - Vaca</p>
-                    </div>
-                    <h4 style="color: #1a2a4f;">🎮 Como se diz "gato" em inglês?</h4>
-                    <input type="text" id="animal1" placeholder="Digite em inglês" style="padding: 0.5rem; border-radius: 8px; border: 1px solid #ddd;">
-                    <button onclick="checkAnimal('animal1', 'cat')" style="margin-left: 0.5rem; background: #ff0000; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px;">Verificar</button>
-                    <p id="animal-feedback" style="margin-top: 0.5rem;"></p>
-                </div>
-            `;
-        }
-        
-        // Funções de verificação
-        window.checkColor = function(inputId, expected) {
-            const input = document.getElementById(inputId);
-            const userAnswer = input.value.trim().toLowerCase();
-            const feedback = document.getElementById('color-feedback');
-            if (userAnswer === expected) {
-                feedback.innerHTML = '✅ Correto! Muito bem!';
-                feedback.style.color = 'green';
-                speak(`Correct! ${expected} is right.`);
-                input.disabled = true;
-                input.style.opacity = '0.7';
-            } else {
-                feedback.innerHTML = `❌ Quase lá! "${expected}" é a cor correta. Tente novamente.`;
-                feedback.style.color = 'red';
-                speak(`Try again. The correct color is ${expected}.`);
-                input.value = '';
-                input.focus();
-            }
-        };
-        
-        window.checkVerb = function(inputId, expected) {
-            const input = document.getElementById(inputId);
-            const userAnswer = input.value.trim().toLowerCase();
-            const feedback = document.getElementById('verb-feedback');
-            if (userAnswer === expected) {
-                feedback.innerHTML = '✅ Correto! "I drink water" - Eu bebo água!';
-                feedback.style.color = 'green';
-                speak(`Correct! I drink water.`);
+
+        window.checkColor = function(id, expected) {
+            const input = document.getElementById(id);
+            const fb = document.getElementById('color-feedback');
+            if (input.value.trim().toLowerCase() === expected) {
+                fb.innerHTML = '✅ Correto! Muito bem!'; fb.style.color = 'green';
+                speak(`Correct! ${expected}`);
                 input.disabled = true;
             } else {
-                feedback.innerHTML = `❌ Tente novamente. A resposta correta é "${expected}".`;
-                feedback.style.color = 'red';
-                speak(`Try again. The correct answer is ${expected}.`);
+                fb.innerHTML = `❌ Tente novamente. A resposta é "${expected}"`; fb.style.color = 'red';
+                speak(`Try again. The answer is ${expected}`);
                 input.value = '';
-                input.focus();
             }
         };
-        
-        window.checkFamily = function(inputId, expected) {
-            const input = document.getElementById(inputId);
-            const userAnswer = input.value.trim().toLowerCase();
-            const feedback = document.getElementById('family-feedback');
-            if (userAnswer === expected) {
-                feedback.innerHTML = '✅ Correto! Sister = irmã!';
-                feedback.style.color = 'green';
-                speak(`Correct! Sister.`);
+        window.checkVerb = function(id, expected) {
+            const input = document.getElementById(id);
+            const fb = document.getElementById('verb-feedback');
+            if (input.value.trim().toLowerCase() === expected) {
+                fb.innerHTML = '✅ Correto! "I drink water" - Eu bebo água!'; fb.style.color = 'green';
+                speak('Correct! I drink water');
                 input.disabled = true;
             } else {
-                feedback.innerHTML = `❌ Tente novamente. A resposta é "${expected}".`;
-                feedback.style.color = 'red';
-                speak(`Try again. The answer is ${expected}.`);
+                fb.innerHTML = `❌ Tente novamente. A resposta é "${expected}"`; fb.style.color = 'red';
+                speak(`Try again. The answer is ${expected}`);
                 input.value = '';
-                input.focus();
             }
         };
-        
-        window.checkAnimal = function(inputId, expected) {
-            const input = document.getElementById(inputId);
-            const userAnswer = input.value.trim().toLowerCase();
-            const feedback = document.getElementById('animal-feedback');
-            if (userAnswer === expected) {
-                feedback.innerHTML = '✅ Correto! Cat = gato! Meow! 🐱';
-                feedback.style.color = 'green';
-                speak(`Correct! Cat.`);
+        window.checkFamily = function(id, expected) {
+            const input = document.getElementById(id);
+            const fb = document.getElementById('family-feedback');
+            if (input.value.trim().toLowerCase() === expected) {
+                fb.innerHTML = '✅ Correto! Sister = irmã!'; fb.style.color = 'green';
+                speak('Correct! Sister');
                 input.disabled = true;
             } else {
-                feedback.innerHTML = `❌ Tente novamente. A resposta é "${expected}".`;
-                feedback.style.color = 'red';
-                speak(`Try again. The answer is ${expected}.`);
+                fb.innerHTML = `❌ Tente novamente. A resposta é "${expected}"`; fb.style.color = 'red';
+                speak(`Try again. The answer is ${expected}`);
                 input.value = '';
-                input.focus();
+            }
+        };
+        window.checkAnimal = function(id, expected) {
+            const input = document.getElementById(id);
+            const fb = document.getElementById('animal-feedback');
+            if (input.value.trim().toLowerCase() === expected) {
+                fb.innerHTML = '✅ Correto! Cat = gato! Meow! 🐱'; fb.style.color = 'green';
+                speak('Correct! Cat');
+                input.disabled = true;
+            } else {
+                fb.innerHTML = `❌ Tente novamente. A resposta é "${expected}"`; fb.style.color = 'red';
+                speak(`Try again. The answer is ${expected}`);
+                input.value = '';
             }
         };
 
-        // Abrir lição
         document.querySelectorAll('.lesson-card').forEach(card => {
             card.addEventListener('click', () => {
-                const lessonId = card.dataset.lesson;
-                const lesson = lessons[lessonId];
+                const lesson = lessons[card.dataset.lesson];
                 if (lesson) {
                     document.getElementById('lesson-title').innerHTML = lesson.title;
                     document.getElementById('lesson-body').innerHTML = lesson.content;
                     document.getElementById('lesson-content').style.display = 'block';
                     document.getElementById('lesson-content').scrollIntoView({ behavior: 'smooth' });
-                    attachAudioEvents();
-                    
-                    if (lessonId === '2') {
-                        attachQuizEvents();
-                    }
+                    document.querySelectorAll('.audio-btn').forEach(btn => {
+                        btn.addEventListener('click', () => speak(btn.dataset.word));
+                    });
+                    document.querySelectorAll('.quiz-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const isCorrect = btn.dataset.correct === btn.innerText;
+                            const fb = document.getElementById('quiz-feedback');
+                            if (isCorrect) {
+                                fb.innerHTML = '✅ Correto! Muito bem!'; fb.style.color = 'green';
+                                speak('Correct! Well done!');
+                            } else {
+                                fb.innerHTML = '❌ Tente novamente.'; fb.style.color = 'red';
+                                speak('Try again.');
+                            }
+                        });
+                    });
                 }
             });
         });
@@ -1748,73 +1300,12 @@
             window.speechSynthesis.cancel();
         });
 
-        function attachAudioEvents() {
-            document.querySelectorAll('.audio-btn').forEach(btn => {
-                btn.removeEventListener('click', btn._listener);
-                const word = btn.dataset.word;
-                const listener = () => speak(word);
-                btn.addEventListener('click', listener);
-                btn._listener = listener;
-                btn.style.background = '#ff0000';
-                btn.style.color = 'white';
-                btn.style.border = 'none';
-                btn.style.padding = '0.25rem 0.75rem';
-                btn.style.borderRadius = '20px';
-                btn.style.cursor = 'pointer';
-                btn.style.marginLeft = '0.5rem';
-            });
-        }
-
-        function attachQuizEvents() {
-            const quizBtns = document.querySelectorAll('.quiz-btn');
-            quizBtns.forEach(btn => {
-                btn.removeEventListener('click', btn._quizListener);
-                const listener = () => {
-                    const isCorrect = btn.dataset.correct === btn.innerText;
-                    const feedback = document.getElementById('quiz-feedback');
-                    if (isCorrect) {
-                        feedback.innerHTML = '✅ Correto! Muito bem! Seven é 7!';
-                        feedback.style.color = 'green';
-                        speak('Correct! Seven is number seven. Well done!');
-                    } else {
-                        feedback.innerHTML = '❌ Tente novamente. Seven é o número 7.';
-                        feedback.style.color = 'red';
-                        speak('Try again. Seven is number seven.');
-                    }
-                };
-                btn.addEventListener('click', listener);
-                btn._quizListener = listener;
-            });
-        }
-
-        // Menu de navegação
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if(targetElement) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
             });
-        });
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if(window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.background = 'linear-gradient(135deg, #0f1a2f 0%, #1a2a4f 100%)';
-            } else {
-                header.style.padding = '15px 0';
-                header.style.background = 'linear-gradient(135deg, #1a2a4f 0%, #2c3e6e 100%)';
-            }
         });
     </script>
 </body>
